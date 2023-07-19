@@ -1,11 +1,19 @@
+using FizzBuzz.Handlers;
+
 namespace FizzBuzzTest
 {
     [TestClass]
-    public class UnitTest1
+    public class FizzBuzzUnitTest1
     {
+        private readonly Operations _ops;
+
         [TestMethod]
-        public void TestMethod1()
+        public void IsPrime_InputIs1_ReturnFalse()
         {
+            bool result = _ops.is_prime(1);
+
+            Assert.IsFalse(result, "1 should not be prime");
         }
     }
+
 }
